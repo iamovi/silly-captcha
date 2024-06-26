@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silly reCAPTCHA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="captcha-container">
+        <h1>Silly reCAPTCHA</h1>
+        <p>Select the <span id="target-emoji"></span> emoji within <span id="timer">10</span> seconds:</p>
+        <div class="emoji-grid" id="emoji-grid"></div>
+        <button id="verify-button">Verify</button>
+        <p id="result-message"></p>
+        <p id="attempts-message"></p>
+        <div class="difficulty-selector">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

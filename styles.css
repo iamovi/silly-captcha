@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.captcha-container {
+    background-color: #1E1E1E;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 300px;
+    position: relative;
+}
+
+.emoji-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.emoji {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.emoji:hover {
+    transform: scale(1.2);
+}
+
+.emoji.selected {
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    transform: scale(1.2);
+}
+
+#verify-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #007BFF;
+    border: none;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+#verify-button:disabled {
+    background-color: #555;
+}
+
+#result-message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+#error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.difficulty-selector {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.difficulty-selector label {
+    margin-right: 10px;
+}
+
+.emoji.correct {
+    animation: correctAnimation 0.5s ease-in-out;
+}
+
+.emoji.wrong {
+    animation: wrongAnimation 0.5s ease-in-out;
+}
+
+@keyframes correctAnimation {
+    0% { background-color: #4CAF50; }
+    100% { background-color: transparent; }
+}
+
+@keyframes wrongAnimation {
+    0% { background-color: #F44336; }
+    100% { background-color: transparent; }
+}
